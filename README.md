@@ -176,22 +176,10 @@ ng build --configuration production
 5. Create a Pull Request
 
 ## Screenshots
-![Create Account](./Screenshots/Create_Account.png)
-![Account Created Popup](./Screenshots/Account_created_popup.png)
-![Login Page](./Screenshots/login_page.png)
 ![Login Popup](./Screenshots/login_popup.png)
-![Account](./Screenshots/Account.png)
 ![Home Page](./Screenshots/Home_page.png)
-![Today Specials](./Screenshots/Today_Specials.png)
-![Why Choose Mealbox](./Screenshots/Why_choose_Mealbox.png)
 ![Meals Page](./Screenshots/Meals_Page.png)
-![Wishlist](./Screenshots/Wishlist.png)
-![Cart](./Screenshots/Cart.png)
 ![Order Popup](./Screenshots/Order_Popup.png)
-![Logout Popup](./Screenshots/logout_popup.png)
-![Forgot Password](./Screenshots/Forgot_Password.png)
-![Password Updated](./Screenshots/Password_Updated.png)
-
 
 ## License
 This project is licensed under the MIT License.
