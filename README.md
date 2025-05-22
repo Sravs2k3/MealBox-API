@@ -1,5 +1,5 @@
 # MealBox Indian Food Delivery Application
-A full-stack Indian food delivery application built with Angular and ASP.NET Core.
+A full-stack Indian food delivery application built with Angular and ASP.NET Core(C#).
 
 ## Features
 - User authentication and authorization with JWT
@@ -11,8 +11,9 @@ A full-stack Indian food delivery application built with Angular and ASP.NET Cor
 
 ## Prerequisites
 
-### Backend (.NET Core)
+### Backend (.NET Core - C#)
 - .NET 6.0 SDK or later
+- C#
 - SQLite
 - Visual Studio 2022 or VS Code
 - Node.js and npm (for running the frontend)
@@ -25,7 +26,7 @@ A full-stack Indian food delivery application built with Angular and ASP.NET Cor
 ## Project Structure
 ```
 MealBox-API-main/
-├── backend/                 # ASP.NET Core Web API backend
+├── backend/                 # ASP.NET Core(C#) Web API backend
 │   ├── Controllers/         # API controllers
 │   ├── Data/                # Database context and seeders
 │   ├── Models/              # Entity models
@@ -138,15 +139,12 @@ export const environment = {
 - `POST /api/wishlist/items` - Add item to wishlist
 - `DELETE /api/wishlist/items/{id}` - Remove item from wishlist
 
-### Coupons
-- `GET /api/coupons` - Get available coupons
-- `POST /api/coupons/redeem` - Redeem a coupon
 
 ## Development
 
 ### Running Tests
 
-#### Backend
+#### Backend(C#)
 ```bash
 dotnet test
 ```
