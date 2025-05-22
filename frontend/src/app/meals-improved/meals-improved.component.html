@@ -1,0 +1,94 @@
+<div class="container mt-4">
+  <!-- Search and Filter Section -->
+  <div class="search-filter-section mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" class="form-control" placeholder="Search meals..." [(ngModel)]="searchQuery" (input)="filterMeals()">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="filter-buttons">
+          <button class="btn btn-outline-primary" *ngFor="let category of categories" 
+                  [class.active]="selectedCategory === category"
+                  (click)="filterByCategory(category)">
+            {{ category.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meals Grid -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let meal of filteredMeals">
+      <div class="meal-card">
+        <div class="meal-image-container">
+          <img [src]="meal.imageUrl" [alt]="meal.name" class="meal-image">
+          <div class="meal-badges">
+            <span class="badge bg-success" *ngIf="meal.isSpecial">Special</span>
+            <span class="badge bg-warning" *ngIf="meal.rating >= 4.5">Top Rated</span>
+          </div>
+        </div>
+        <div class="meal-content">
+          <h3 class="meal-title">{{ meal.name }}</h3>
+          <p class="meal-description">{{ meal.description }}</p>
+          
+          <!-- Nutritional Information -->
+          <div class="nutrition-info">
+            <div class="nutrition-item">
+              <i class="fas fa-fire"></i>
+              <span>{{ meal.calories }} kcal</span>
+            </div>
+            <div class="nutrition-item">
+              <i class="fas fa-dumbbell"></i>
+              <span>{{ meal.protein }}g protein</span>
+            </div>
+            <div class="nutrition-item">
+              <i class="fas fa-bread-slice"></i>
+              <span>{{ meal.carbs }}g carbs</span>
+            </div>
+            <div class="nutrition-item">
+              <i class="fas fa-oil-can"></i>
+              <span>{{ meal.fats }}g fats</span>
+            </div>
+          </div>
+
+          <!-- Price and Rating -->
+          <div class="meal-footer">
+            <div class="price-rating">
+              <span class="price">₹{{ meal.price }}</span>
+              <span class="rating">
+                <i class="fas fa-star"></i>
+                {{ meal.rating || 'New' }}
+              </span>
+            </div>
+            <div class="meal-actions">
+              <button class="btn btn-primary" (click)="addToCart(meal)">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+              <button class="btn btn-outline-secondary" (click)="addToWishlist(meal)">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading and Error States -->
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger text-center">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="!loading && !errorMessage && filteredMeals.length === 0" class="text-center my-5">
+    <h3>No meals found</h3>
+    <p>Try adjusting your search or filters</p>
+  </div>
+</div>

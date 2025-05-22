@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>Your Orders</h2>
+  <div *ngIf="loading" class="text-center my-4">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div *ngIf="!loading && orders.length === 0" class="alert alert-info">
+    You have no orders.
+  </div>
+  <div *ngIf="!loading && orders.length > 0" class="list-group">
+    <div class="list-group-item" *ngFor="let order of orders">
+      <h5>Order #{{ order.id }} - {{ order.orderDate | date:'medium' }}</h5>
+      <ul class="list-unstyled">
+        <li *ngFor="let item of order.orderItems">
+          <img [src]="item.meal?.imageUrl || 'assets/default-meal.jpg'" alt="{{ item.meal?.name }}" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;" />
+          {{ item.meal?.name }} - Quantity: {{ item.quantity }} - Price: ₹{{ item.meal?.price.toFixed(2) }}
+        </li>
+      </ul>
+      <p><strong>Total Amount:</strong> ₹{{ order.totalAmount.toFixed(2) }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="home-container">
+  <h1>Welcome to MealBox</h1>
+  <p>Delicious Indian food delivered to your doorstep!</p>
+
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80" alt="Delicious Indian Food" />
+  </div>
+
+  <div class="category-flashcards">
+    <div *ngFor="let category of categoryFlashCards" class="flashcard" (click)="navigateToMeals(category.name)">
+      <img [src]="category.imageUrl" alt="{{ category.displayName }}" />
+      <div class="flashcard-label">{{ category.displayName }}</div>
+    </div>
+  </div>
+
+  <h2>Today's Specials</h2>
+  <div class="special-flashcards">
+    <div *ngFor="let meal of specialMeals" class="flashcard" (click)="addToCart(meal)">
+      <img [src]="meal.imageUrl || fallbackImage" [alt]="meal.name" />
+      <div class="flashcard-label">{{ meal.name }}</div>
+    </div>
+  </div>
+
+  <h2>Popular Meals</h2>
+  <div class="meals-grid">
+    <div class="meal-card" *ngFor="let meal of popularMeals">
+      <img [src]="meal.imageUrl || fallbackImage" [alt]="meal.name" />
+      <h3>{{ meal.name }}</h3>
+      <p>{{ meal.description }}</p>
+      <button (click)="addToCart(meal)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.category-flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.special-flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.flashcard {
+  width: 120px;
+  height: 140px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.flashcard:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.flashcard img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.flashcard-label {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 1em;
+  color: #333;
+}
+</style>

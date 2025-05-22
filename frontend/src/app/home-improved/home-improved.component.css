@@ -1,0 +1,223 @@
+/* Styles for HomeImprovedComponent */
+.container {
+  padding: 20px;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?food,healthy');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.subscribe-btn {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #ff5252;
+  transform: scale(1.05);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #ff6b6b;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Special Cards */
+.special-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.special-card:hover {
+  transform: translateY(-5px);
+}
+
+.special-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.special-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.special-card img:hover {
+  transform: scale(1.05);
+}
+
+.nutrition-info {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+/* Category Cards */
+.category-card {
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 1rem;
+  color: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.category-overlay h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Feature Cards */
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Add additional styles as needed */

@@ -1,0 +1,15 @@
+<div style="display: flex; justify-content: flex-end; padding: 10px;">
+  <ng-container *ngIf="!user">
+    <button mat-button routerLink="/login" disabled>Login</button>
+  </ng-container>
+  <ng-container *ngIf="user" style="margin-left: 10px;">
+    <button mat-button (click)="logout()" [disabled]="loading">Logout</button>
+  </ng-container>
+</div>
+
+<div *ngIf="user" class="user-details" style="margin-top: 20px;">
+  <h2>User Details</h2>
+  <p><strong>Name:</strong> {{ user.fullName }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <!-- Add more user details here as needed -->
+</div>

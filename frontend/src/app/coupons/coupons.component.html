@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h2>Available Coupons</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <ul class="list-group">
+    <li *ngFor="let coupon of coupons" class="list-group-item">
+      <strong>{{ coupon.code }}</strong> - {{ coupon.discountPercentage }}% off
+      <br />
+      Valid from {{ coupon.validFrom | date }} to {{ coupon.validTo | date }}
+    </li>
+  </ul>
+</div>

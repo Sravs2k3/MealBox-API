@@ -1,0 +1,71 @@
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Your Weekly Meal Plan</h1>
+    <p class="hero-subtitle">Discover delicious meals, plan your week, and enjoy healthy eating</p>
+    <button class="btn btn-primary btn-lg subscribe-btn" routerLink="/meals">Subscribe Now</button>
+  </div>
+</div>
+
+<!-- Today's Specials -->
+<div class="container mt-5">
+  <h2 class="section-title">Today's Specials</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let special of specialMeals">
+      <div class="card special-card">
+        <div class="special-badge">Special</div>
+        <img [src]="special.imageUrl" class="card-img-top" [alt]="special.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ special.name }}</h5>
+          <p class="card-text">{{ special.description }}</p>
+          <div class="price-rating">
+            <span class="price" *ngIf="special.price !== undefined">₹{{ special.price }}</span>
+            <span class="rating" *ngIf="special.rating !== undefined">
+              <i class="fas fa-star"></i> {{ special.rating }}
+            </span>
+          </div>
+          <button class="btn btn-primary w-100 mt-2" (click)="addToCart(special)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Categories Flashcards -->
+<!-- Hidden as per user request -->
+<!--
+<div class="category-flashcards">
+  <div *ngFor="let category of categoryFlashCards" class="flashcard" (click)="filterByCategory(category.name)">
+    <img [src]="category.imageUrl" alt="{{ category.displayName }}" />
+    <div class="flashcard-label">{{ category.displayName }}</div>
+  </div>
+</div>
+-->
+
+<!-- Why Choose Us -->
+<div class="container mt-5">
+  <h2 class="section-title">Why Choose MealBox</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="feature-card" routerLink="/meals" style="cursor:pointer;">
+        <i class="fas fa-utensils"></i>
+        <h3>Fresh Ingredients</h3>
+        <p>We use only the freshest ingredients for all our meals</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="feature-card" routerLink="/meals" style="cursor:pointer;">
+        <i class="fas fa-truck"></i>
+        <h3>Fast Delivery</h3>
+        <p>Get your meals delivered within 30 minutes</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="feature-card" routerLink="/meals" style="cursor:pointer;">
+        <i class="fas fa-heart"></i>
+        <h3>Healthy Options</h3>
+        <p>Choose from a variety of healthy meal options</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MealBox.API.props" />
+</Project>

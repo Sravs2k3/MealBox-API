@@ -1,0 +1,14 @@
+filterMealsByCategory(category: string): void {
+    const cat = category.toLowerCase();
+    if (cat === 'veg') {
+      this.filteredMeals = this.meals.filter(meal => meal.type.toLowerCase() === 'veg');
+    } else if (cat === 'non-veg') {
+      this.filteredMeals = this.meals.filter(meal => meal.type.toLowerCase() === 'non-veg');
+    } else if (cat === 'desserts') {
+      this.filteredMeals = this.meals.filter(meal => meal.category.toLowerCase() === 'dessert');
+    } else if (cat === 'snacks') {
+      this.filteredMeals = this.meals.filter(meal => meal.category.toLowerCase() === 'snack' || meal.category.toLowerCase() === 'starter');
+    } else {
+      this.filteredMeals = this.meals.filter(meal => meal.category.toLowerCase() === cat);
+    }
+  }

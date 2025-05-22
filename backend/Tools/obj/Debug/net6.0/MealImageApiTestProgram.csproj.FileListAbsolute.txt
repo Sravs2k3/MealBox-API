@@ -1,0 +1,14 @@
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.GeneratedMSBuildEditorConfig.editorconfig
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.AssemblyInfoInputs.cache
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.AssemblyInfo.cs
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.csproj.CoreCompileInputs.cache
+D:\MealBox-API\backend\Tools\bin\Debug\net6.0\MealImageApiTestProgram.exe
+D:\MealBox-API\backend\Tools\bin\Debug\net6.0\MealImageApiTestProgram.deps.json
+D:\MealBox-API\backend\Tools\bin\Debug\net6.0\MealImageApiTestProgram.runtimeconfig.json
+D:\MealBox-API\backend\Tools\bin\Debug\net6.0\MealImageApiTestProgram.dll
+D:\MealBox-API\backend\Tools\bin\Debug\net6.0\MealImageApiTestProgram.pdb
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.dll
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\refint\MealImageApiTestProgram.dll
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.pdb
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\MealImageApiTestProgram.genruntimeconfig.cache
+D:\MealBox-API\backend\Tools\obj\Debug\net6.0\ref\MealImageApiTestProgram.dll

@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h2>Your Wishlist</h2>
+  <div *ngIf="loading" class="text-center my-4">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div *ngIf="!loading && wishlistItems.length === 0" class="alert alert-info">
+    Your wishlist is empty.
+  </div>
+  <div *ngIf="!loading && wishlistItems.length > 0" class="list-group">
+    <div class="list-group-item d-flex align-items-center" *ngFor="let item of wishlistItems">
+      <img [src]="item.meal?.imageUrl || 'assets/default-meal.jpg'" alt="{{ item.meal?.name }}" class="me-3" style="width: 80px; height: 80px; object-fit: cover;" />
+      <div class="flex-grow-1">
+        <h5>{{ item.meal?.name }}</h5>
+        <p class="mb-1">{{ item.meal?.description }}</p>
+        <p class="mb-1 text-success">Price: ₹{{ item.meal?.price.toFixed(2) }}</p>
+      </div>
+      <button class="btn btn-danger btn-sm ms-3" (click)="removeItem(item)">Remove</button>
+    </div>
+  </div>
+</div>

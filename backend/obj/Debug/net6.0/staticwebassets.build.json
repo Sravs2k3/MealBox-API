@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6foe1QAZko/CswfmZSrAEg4qlZZuMSPgvf79mqqIqFo=",
+  "Source": "MealBox.API",
+  "BasePath": "_content/MealBox.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

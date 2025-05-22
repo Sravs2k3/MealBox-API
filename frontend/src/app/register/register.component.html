@@ -1,0 +1,27 @@
+<div class="register-container">
+  <h2>Create an Account</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="register-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="fullName" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput formControlName="confirmPassword" type="password" required />
+    </mat-form-field>
+    <button type="submit" [disabled]="registerForm.invalid">Create Account</button>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </form>
+</div>

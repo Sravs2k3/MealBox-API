@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" style="position: relative;">
+  <mat-toolbar-row>
+    <span class="app-title" routerLink="/">MealBox</span>
+    <span class="spacer"></span>
+    <nav>
+      <a mat-button routerLink="/meals" routerLinkActive="active-link">Meals</a>
+      <a mat-button routerLink="/cart" routerLinkActive="active-link">Cart</a>
+      <a mat-button routerLink="/wishlist" routerLinkActive="active-link">Wishlist</a>
+      <a mat-button routerLink="/account" routerLinkActive="active-link">Account</a>
+    </nav>
+    <nav class="auth-nav">
+      <button *ngIf="isLoggedIn" mat-button (click)="logout()">Logout</button>
+      <a *ngIf="!isLoggedIn" mat-button routerLink="/login" routerLinkActive="active-link">Login</a>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
