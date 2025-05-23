@@ -11,17 +11,19 @@ A full-stack Indian food delivery application built with Angular and ASP.NET Cor
 
 ## Prerequisites
 
-### Backend (.NET Core - C#)
-- .NET 6.0 SDK or later
-- C#
-- SQLite
-- Visual Studio 2022 or VS Code
-- Node.js and npm (for running the frontend)
+### 🛠️ Tech Stack
 
-### Frontend (Angular)
-- Node.js (v18 or later)
-- npm (v9 or later)
-- Angular CLI (v15 or later)
+| Layer     | Technology                  | Version/Requirement            |
+|-----------|-----------------------------|--------------------------------|
+| **Backend (.NET Core - C#)** | .NET SDK | .NET 6.0 or later              |
+|           | Programming Language        | C#                             |
+|           | Database                    | SQLite                         |
+|           | IDE                         | Visual Studio 2022 or VS Code  |
+|           | JavaScript Runtime          | Node.js and npm (for frontend) |
+| **Frontend (Angular)**      | Node.js   | v18 or later                   |
+|           | npm                         | v9 or later                    |
+|           | Angular CLI                 | v15 or later                   |
+
 
 ## Project Structure
 ```
